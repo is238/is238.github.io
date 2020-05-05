@@ -1,2 +1,0 @@
-
-window.addEventListener('load',()=>{let form=document.querySelector('.form');let info=form.querySelector('.form_info');form.addEventListener('submit',evt=>{evt.preventDefault();let formData=new FormData(forms.mainForm);let method=formData.method;let url=formData.action;let xhr=new XMLHttpRequest();xhr.open(method,url);xhr.onreadystatechange(()=>{if(xhr.status==200){form.reset();info.textContent='Спасибо за обратную связь!';}else{info.textContent='Произошла ошибка. Проверьте заполненные поля и повторите отправку';}});xhr.send(formData);});});
